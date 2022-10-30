@@ -3,15 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Наследование в CSS</title>
-		<link rel="stylesheet" type="text/css" href="css/style19.css">
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	</head>
 <body>
 
      <!-- Шапка каталога -->
-
+<div class="backround-container">
 <header class="wrapper">
      <nav class="main-navigation">
-       <a class="logo"><img src="" alt="Логотип сайта" width="140" height="70"></a>
+       <a class="logo"><img src="./images/logo.svg" width="140" height="70" alt="Иконка логотипа Sedona"></a>
           <ul class="navigation-list">
                <li class="navigation-item">
                     <a class="navigation-link" href="index.html">Главная</a>
@@ -23,23 +23,29 @@
                     <a class="navigation-link navigation-link-current" href="#">Гостиницы</a>
                </li>
           </ul>
-          <ul class="main-navigation navigation-user">
-               <li class="navigation-item">
-                    <a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+          <ul class=" navigation-user">
+               <li class="navigation-useritem">
+                    <a class="navigation-link-user" href="#">
+                      <svg class="navigation-icon" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m19.5 18-3.7-3.67a8 8 0 0 0 1.7-4.87 8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" fill="#000"/></svg>
+                      <span class="visually-hidden">Поиск</span></a>
                </li>
-               <li class="navigation-item">
-                    <a class="navigation-link" href="#"><span class="visually-hidden">Корзина</span></a>
+               <li class="navigation-useritem">
+                    <a class="navigation-link-user" href="#">
+                      <svg class="navigation-icon" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" fill="#000"/></svg>
+                     <span class="visually-hidden">избранное</span></a>
+                  </li>
+               <li class="">
+                <button class="user-form">Хочу сюда</button>
                </li>
           </ul>
-          <button class="user-form">Хочу сюда</button>
      </nav>
 </header>
 
-
-<main class="main-index">
+<div class="page-container">
+<main class=" main-container main-index">
 
      <!-- Вторая шапка -->
-
+    <div class="container-header-filter">
     <header class="inner-header">
        <h1 class="inner-header-title">Гостиницы Седоны</h1>
          <ul class="breadcrumbs">
@@ -53,12 +59,12 @@
               </li>
          </ul>
      </header>
-     <div class="catalog-filter">
+     <section class="catalog-product">
 
           <!-- Конфигуратор услуг -->
 
           <form class="catalog-form">
-               <fieldset class="catalog-filter">  
+               <fieldset class="catalog-filter">
                  <legend class="catalog-title">Инфраструктура:</legend>
                  <ul class="catalog-list">
                     <li class="catalog-item">
@@ -74,7 +80,7 @@
                 </label>
                    </li>
                      <li class="catalog-item">
-                         <label class="catalog-control">wi-fi
+                         <label class="catalog-control">
                     <input class="control-input" type="checkbox" name="checkbox">
                     wi-fi
                     </label>
@@ -108,31 +114,31 @@
 
                <!-- калькулятор стоимости -->
 
-               <fieldset class="catalog-filter">
+               <fieldset class="catalog-filter-cost">
                   <legend class="catalog-title">Стоимость, ₽:</legend>
-                    <ul class="catalog-list-calculation"> 
+                    <ul class="catalog-list-calculation">
                        <li class="catalog-list-item-calculation">
-                          <label class="catalog-control"> 
-                          <input class="catalog-calculation" type="number" name="number" min="0" max="10000">
+                          <label class="catalog-control"></label>
+                          <input class="catalog-calculation" type="number" name="number" min="0" max="10000" placeholder="0">
                       <span class="visually-hidden">Стоимость от</span>
-                </label>
                   </li>
                       <li class="catalog-list-item-calculation">
-                       <label class="catalog-control">
-                           <input class="catalog-calculation" type="number" name="number" min="0" max="10000">
+                       <label class="catalog-control"></label>
+                           <input class="catalog-calculation" type="number" name="number" min="0" max="10000" placeholder="9000">
                        <span class="visually-hidden">Стоимость до</span>
-                  </label>
                      <input class="catalog-range" type="range" name="range" min="0" max="100000">
                    </li>
                  </ul>
                </fieldset>
-
+                  <div class="button-container">
                   <button class="btn-apply" type="submit" name="botton">Применить</button>
                <button class="btn-reset" type="reset" name="reset">Сбросить</button>
-
+               </div>
           </form>
-     </div>
-     <div class="section-customization">
+     </section>
+   </div>
+     <div class="catalog-container">
+       <div class="section-customization">
           <h2 class="found-title">Найдено гостиниц:38</h2>
         <select class="select-control">
              <option value="Cheaply">Самые дешевые</option>
@@ -149,56 +155,186 @@
              <span class="visually-hidden">Лесенка карточек</span>
         </a>
      </div>
-         <ul>
-          <li>
+      <div class="container-list-hotel">
+         <ul class="product-card-list">
+          <li class="product-card-item">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="">
+            <img class="product-card-image" src="./images/catalog/hotel-1.jpg" width="300" height="212" alt="Фотография места Amara Resort">
             <h3 class="product-card-title">Amara Resort & Spa</h3>
           </a>
-          <div class="product-card-cost">Гостиница От 4000 ₽</div>
+          <span class="product-card-cost">Гостиница</span>
+          <span class="product-card-cost">От 4000 ₽</span>
           <a class="product-card-description" href="#">Подробнее</a>
           <a class="product-card-picture" href="#">в изображение</a>
+          <ul class="star-icons-list">
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item" >
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+          </ul>
           <div class="product-card-rating">
               Рейтинг: 8,5
           </div>
           </li>
-             <li>
+             <li class="product-card-item">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="">
+            <img class="product-card-image" src="./images/catalog/hotel-2.jpg" width="300" height="212" alt="Фотография места Villas at Poco Diablo">
             <h3 class="product-card-title">AVillas at Poco Diablo</h3>
           </a>
-          <div class="product-card-cost">Гостиница От 5000 ₽</div>
+          <span class="product-card-cost">Гостиница</span>
+          <span class="product-card-cost">От 5000 ₽</span>
           <a class="product-card-description" href="#">Подробнее</a>
           <a class="product-card-picture" href="#">в изображение</a>
+          <ul class="star-icons-list">
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item" >
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+          </ul>
           <div class="product-card-rating">
               Рейтинг: 9,2
           </div>
           </li>
-             <li>
+             <li class="product-card-item">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="">
+            <img class="product-card-image" src="./images/catalog/hotel-3.jpg" width="300" height="212" alt="Фотография места Desert Quail Inn">
             <h3 class="product-card-title">Desert Quail Inn</h3>
           </a>
-          <div class="product-card-cost">Гостиница От 2500 ₽</div>
+          <span class="product-card-cost">Гостиница</span>
+          <span class="product-card-cost">От 2500 ₽</span>
           <a class="product-card-description" href="#">Подробнее</a>
           <a class="product-card-picture" href="#">в изображение</a>
+          <ul class="star-icons-list">
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item" >
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+          </ul>
           <div class="product-card-rating">
               Рейтинг: 6,9
           </div>
           </li>
-             <li>
+             <li class="product-card-item">
           <a class="product-card-link" href="#">
-            <img class="product-card-image" src="">
+            <img class="product-card-image" src="./images/catalog/hotel-4.jpg" width="300" height="212" alt="Фотография места GreenTree Inn">
             <h3 class="product-card-title">GreenTree Inn</h3>
           </a>
-          <div class="product-card-cost">Гостиница От 1500 ₽</div>
+          <span class="product-card-cost">Гостиница</span>
+          <div class="product-card-cost"> От 1500 ₽</div>
           <a class="product-card-description" href="#">Подробнее</a>
           <a class="product-card-picture" href="#">в изображение</a>
+          <ul class="star-icons-list">
+            <li class="star-icons-item">
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+            <li class="star-icons-item" >
+              <img class="product-card-image" src="./images/stars.svg" width="18" height="17" alt="Звёзды рейтинга отелей">
+            </li>
+          </ul>
           <div class="product-card-rating">
               Рейтинг: 5,0
           </div>
-          </li>
+        </li>
      </ul>
-</main>
+    </div>
+    </div>
+    <div class="container-pagination">
+       <ul class="pagination-list">
+        <li class="pagination-item">
+          <a class="pagination-link-current">
+            1
+          </a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link">
+            2
+          </a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link">
+            3
+          </a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link">
+            4
+          </a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link-ellipsis">
+            ...
+          </a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link">
+            10
+          </a>
+        </li>
+       </ul>
+    </div>
+    <section class="subscribe-email">
+      <h2 class="subscribe-email-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-email-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+         <form class="email-form" action="#" method="get">
+          <label class="email-form-label" for="email"></label>
+          <input class="input-email-form" type="email" name="email" id="email" placeholder="Ваш e-mail">
+          <button class="subscribe-email-button" type="submit" >Подписаться</button>
+         </form>
+        </section>
+      </main>
+      </div>
+
+
+      <div class="page-container">
+      <footer class="page-footer">
+        <section class="socials-icons">
+         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+          <ul class="socials-list">
+            <li class="socials-item">
+              <a href="#" class="socials-link social-vk">
+                <span class="visually-hidden">Иконка логотипа Вконтакте</span>
+              </a>
+               </li>
+              <li class="socials-item">
+                <a href="#" class="socials-link social-tt">
+                  <span class="visually-hidden">Иконка логотипа Телеграмм</span>
+                </a>
+              </li>
+              <li class="socials-item">
+                <a href="#" class="socials-link social-youtube">
+                  <span class="visually-hidden">Иконка логотипа Ютуб</span>
+                </a>
+              </li>
+          </ul>
+        </section>
+        <a class="contact-number" href="tel:++78128121212">+7 (812) 812-12-12</a>
+          <a href="#" class="footer-logo">
+            <span class="visually-hidden">Иконка логотипа htmlacademy</span>
+           <img src="./images/footer-logo.svg" width="114" height="32" alt="Иконка логотипа htmlacademy">
+         </a>
+      </footer>
+    </div>
+    </div>
 </body>
 </html>

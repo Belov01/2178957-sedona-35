@@ -1,0 +1,339 @@
+@font-face{
+	font-family: "PT sans";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/ptsans-700.woff2") format("woff2");
+	font-display: swap;
+}
+@font-face{
+	font-family: "PT sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/ptsans-400.woff2") format("woff2");
+	font-display: swap;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	font-family: "PT Sans", sans-serif;
+	line-height: 24px;
+	font-weight: 400;
+	background-color: rgba(131, 179, 211, 0.2);
+	color: #000000;
+	box-sizing: content-box;
+}
+
+.main-container{
+	flex-grow: 1;
+}
+
+.main-navigation{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 auto;
+ width: 1200px;
+}
+
+.page-container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.page-footer-container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
+
+
+}
+
+.logo{
+ display: block;
+ margin: 0 auto;
+}
+
+.navigation-list{
+ margin: 0;
+ padding: 0;
+ width: 400px;
+}
+
+.navigation-list-user{
+	 max-width: 300px;
+}
+.page-header{
+	color: inherit;
+	background-color: #ffffff;
+}
+
+.navigation-link{
+	font-family: "PT Sans";
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.navigation-btn-form{
+	width: 160px;
+	height: 36px;
+	background-color: #756157;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.welcome-page{
+	background-image: url(../images/background-welcome.jpg);
+	background-position: 100% auto;
+	background-repeat: no-repeat;
+	color: #ffffff;
+	background-color: rgba(131, 179, 211, 0.2);
+}
+.info-page{
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;
+	height: 282px;
+}
+.info-title{
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+
+.info-description{
+    font-family: "PT Sans";
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+}
+
+.advantage-list{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+	text-align: center;
+}
+
+.advantage-item{
+  background-color: #82B3D3;
+  width: 400px;
+}
+
+.advantage-title{
+	font-family: "PT Sans";
+	font-size: 24px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.advantage-description{
+	font-family: PT Sans;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.fuactures-list{
+	list-style: none;
+	text-align: center;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.fuactures-item{
+	background-color: rgba(131, 179, 211, 0.12);
+	width: 400px;
+
+}
+.fuactures-item-current{
+	background-color: rgba(131, 179, 211, 0.2);
+	width: 400px;
+	min-height: 384px;
+}
+
+.fuactures-title{
+	font-family: PT Sans;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.fuactures-description{
+	font-family: PT Sans;
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+}
+
+
+.fuactures-list-service{
+    list-style: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	display: flex;
+
+}
+
+.fuactures-title-service{
+	font-family: PT Sans;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.fuactures-description-service{
+	font-family: PT Sans;
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+}
+
+.fuactures-item-service{
+	background-color: #ffffff;
+	width: 400px;
+	min-height: 384px;
+}
+
+.fuactures-item-service-current{
+	background-color: rgba(131, 179, 211, 0.12);
+	width: 400px;
+	min-height: 384px;
+
+}
+
+
+.search-hotel{
+	background-color: #ffffff;
+	text-align: center;
+	height: 406px;
+}
+
+.search-hotel-title{
+	font-family: PT Sans;
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.search-hotel-description{
+    font-family: PT Sans;
+	font-size: 22px;
+	line-height: 26px;
+	color: #333333;
+	font-weight: 400;
+}
+
+.search-hotel-link{
+	background-color: #756157;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 36px;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+
+}
+
+.email-form{
+	background-image: url(../images/backgound.jpg);
+	background-position: top;
+	background-size: 1200px 414px;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	text-align: center;
+	height: 414px;
+
+}
+
+.email-form-title{
+	 font-family: PT Sans;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 36px;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.email-form-description{
+	 font-family: PT Sans;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 26px;
+	color: #ffffff;
+}
+
+.new-email{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+}
+
+.form-botton{
+	background-color: #82B3D3;
+	border: 0px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 36px;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.phone-number{
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 40px;
+	text-decoration: none;
+	color: #000000;
+	display: block;
+	width: 720px;
+	text-align: center;
+}
+
+.page-footer{
+
+ background-color: #ffffff;
+
+}
+.footer-social{
+	width: 142px;
+	margin-left: 81px;
+}
+
+.footer-logo{
+	display: block;
+	width: 115px;
+	margin-right: 71px;
+}
